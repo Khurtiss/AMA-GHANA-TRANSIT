@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import './theme.css';
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--ghana-black);
+}
+
+.btn-primary {
+  background-color: var(--ghana-gold);
+  border-color: var(--ghana-gold);
+  color: var(--ghana-black);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 15px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ghana-gold);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+
+/* Hover lift utility */
+.hover-lift { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.10) !important; }
+
+/* Responsive helpers */
+.uppercase { text-transform: uppercase; }
+.x-small   { font-size: 0.75rem; }
+
+/* Better focus ring for accessibility */
+*:focus-visible { outline: 2px solid var(--ghana-gold); outline-offset: 3px; }
+
+/* Card baseline */
+.card { border-radius: 1rem; }
+
+/* gh-black text utility */
+.text-gh-black { color: var(--ghana-black) !important; }
+.text-gh-gold  { color: var(--ghana-gold) !important; }
+.text-gh-green { color: var(--ghana-green) !important; }
+.text-gh-red   { color: var(--ghana-red) !important; }
+.bg-gh-gold    { background-color: var(--ghana-gold) !important; }
+.bg-gh-green   { background-color: var(--ghana-green) !important; }
+.bg-gh-black   { background-color: var(--ghana-black) !important; }
+
+/* Animate pulse */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.animate-pulse { animation: pulse 2s ease-in-out infinite; }
+
+/* Mobile padding fix */
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .ticket-card {
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    page-break-inside: avoid;
+  }
+  
+  .ticket-stripe {
+    background: #000 !important;
+  }
+  
+  .btn, .navbar, .footer, .action-buttons {
+    display: none !important;
+  }
+  
+  .container {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+  
+  .ticket-notch-left,
+  .ticket-notch-right {
+    display: none !important;
+  }
+}
+
+/* Operator Website Styles */
+.operator-website .hero-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.operator-website .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.operator-website .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.operator-website .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.operator-website .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+@media (max-width: 576px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  h1 { font-size: 1.9rem; }
+}
+
+/* Route Visualization */
+.route-stops {
+  position: relative;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.route-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--ghana-gold);
+}
+
+.route-line {
+  width: 2px;
+  height: 16px;
+  background-color: var(--ghana-gold);
+  opacity: 0.6;
+}
+
+.route-start {
+  background-color: var(--ghana-green) !important;
+}
+
+.route-end {
+  background-color: var(--ghana-red) !important;
+}
