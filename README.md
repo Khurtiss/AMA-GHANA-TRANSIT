@@ -1,16 +1,40 @@
-# React + Vite
+# AMA Ghana Transit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern transit management application for Ghana's AMA (Accra Metropolitan Assembly) built with React and Vite. This application provides real-time public transportation tracking, route optimization, and passenger information services.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Real-time Transportation Tracking** - Live updates on bus routes and schedules
+- **Route Optimization** - Intelligent routing algorithms for efficient travel
+- **Passenger Information Services** - User-friendly interface for journey planning
+- **Responsive Design** - Works seamlessly on desktop and mobile devices
+- **Real-time Data Management** - Firebase backend for reliable data handling
+- **Smooth Animations** - Enhanced UX with Framer Motion
+- **Form Validation** - Secure and validated user inputs with React Hook Form
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React 19, Vite
+- **Styling:** Bootstrap 5, Bootstrap Icons
+- **Forms & Validation:** React Hook Form, Zod
+- **Animations:** Framer Motion
+- **Backend:** Firebase
+- **Routing:** React Router v7
+- **Icons:** Lucide React
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm start
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## License
+
+MIT
